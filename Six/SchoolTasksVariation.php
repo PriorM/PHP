@@ -2,7 +2,7 @@
 <html>
     <body>
     <center>
-        <form action="307Ass6.php" method="post">
+        <form action="SchoolTasksVariation.php" method="post">
             Student Number: <input type="text" name="id"/><br/>
             Password: <input type="password" name="pass"/><br/>
             <input type="submit" value="Login" name="login"/>
