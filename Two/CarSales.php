@@ -1,12 +1,10 @@
 <html>
-	<!--Lab Number 33-->
-	<title> Minor Assessment 2 - Lab Number 33 </title>
 	<head>
 	</head>
 	<body>
 		<center>
 		<h3>Seller</h3> <br/>
-		<form action="307Ass2.php" method="post">
+		<form action="CarSales.php" method="post">
 			Name: <input type="text" name="name"> <br/>
 			Email: <input type="text" name="email"> <br/>
 			Phone Number: <input type="text" name="phone"> <br/>
@@ -17,13 +15,13 @@
 		</form>
 		<br/>
 		<h3>Search</h3><br/>
-		<form action="307Ass2.php" method="post">
+		<form action="CarSales.php" method="post">
 			Plate: <input type="text" name="plateSearch">
 			<input type="submit" value="Search" name="search">
 		</form>
 		<br/>
 		<h3>Buyer</h3><br/>
-		<form action="307Ass2.php" method="post">
+		<form action="CarSales.php" method="post">
 			Wanted Car Plate: <input type="text" name="wantedPlate"> <br/>
 			Proposed Price: $ <input type="text" name="propPrice"> <br/>
 			Buyer Name: <input type="text" name="buyerName"> <br/>
