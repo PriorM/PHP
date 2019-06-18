@@ -2,7 +2,7 @@
 <html>
 <body>
 <center>
-<form action="307Ass5.php" method="post">
+<form action="SchoolTasks.php" method="post">
 	Student Number: <input type="text" name="id"/><br/>
 	Password: <input type="password" name="pass"/><br/>
 	<input type="hidden" name="studID" value="<?php echo $_POST['id']?>">
@@ -11,7 +11,7 @@
 <br/>
 <br/>
 <br/>
-<form action="307Ass5.php" method="post">
+<form action="SchoolTasks.php" method="post">
 	<!--Query 1-->
 	Search for Departments in School: <input type="text" name="deptSearch"> <input type="submit" value="Submit" name="deptSubmit"/> <br/>
 	<!--Query 2-->
@@ -30,14 +30,14 @@
 <br/>
 <br/>
 <br/>
-<form action="307Ass5.php" method="post">
+<form action="SchoolTasks.php" method="post">
 	Course: <input type="text" name="course"/><br/>
 	<input type="submit" value="Enroll" name="enroll"/>
 </form>
 <br/>
 <br/>
 <br/>
-<form action="307Ass5.php" method="post">
+<form action="SchoolTasks.php" method="post">
 	Course: <input type="text" name="courseCancel"/><br/>
 	<input type="submit" value="Cancel Class" name="cancel"/>
 </center>
