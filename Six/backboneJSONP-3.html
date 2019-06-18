@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>JSONP in Backbone.js</title>
+</head>
+<body>
+  <!-- ========= -->
+  <!-- Your HTML -->
+  <!-- ========= -->
+
+  <!-- ========= -->
+  <!-- Libraries -->
+  <!-- ========= -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js" type="text/javascript"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js" type="text/javascript"></script>
+
+  <!-- =============== -->
+  <!-- Javascript code -->
+  <!-- =============== -->
+   <div id="container">Loading...</div>
+  <!-- =============== -->
+<!-- Create your template -->
+  <!-- =============== -->
+<!-- Create your template -->
+<script type="text/template" id="myTable">
+   <table cellspacing='0' cellpadding='0' border='1' >
+     <thead>
+        <tr>
+          <th>Number</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Notes</th>
+
+        </tr>
+     </thead>
+      <%
+        // repeat items 
+        _.each(rc,function(item,key,list){
+      %>
+        <tr>
+          <!-- use variables -->
+          <td><%= key %></td>
+		  <td><%= item.name %></td>
+      <td><%= item.age %></td>
+      <td><%= item.notes %></td>
+        </tr>
+      <%
+        });
+      %>
+    </table>
+</script>
+<script type="text/javascript">
+  _.templateSettings.variable = "rc"; //very important!
+var Flickers = Backbone.Collection.extend({
+  url :  "myapi.php",
+  method: 'POST',
+  sync : function(method, collection, options) {
+    // By setting the dataType to "jsonp", jQuery creates a function
+    // and adds it as a callback parameter to the request.
+    options.dataType = "json";
+    return Backbone.sync(method, collection, options);
+  },
+  parse : function(response) {
+    return response;
+  }
+});
+var flickers = new Flickers();
+
+flickers.fetch({
+  type: 'POST',
+  data : {
+    tags: " darling harbour ",
+    tagmode: "any",
+    format: "json"
+  },
+  success : function(collection, response) {   //as the response is just JSON !
+    console.log(response);
+	  var template = _.template($("#myTable").html());
+	  $("#container").html(template(response));	
+  },
+  error : function(collection, response) { //useless because timeout is the only way!
+     console.log(response.responseText);
+  },
+  // A timeout is the only way to get an error event for JSONP calls!
+  timeout : 6000
+});
+</script>
+</body>
+</html>
