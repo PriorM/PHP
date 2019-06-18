@@ -1,13 +1,11 @@
 <html>
-	<!--Lab Number 33-->
-	<title> Minor Assessment 1 - Lab Number 33 </title>
 	<head>
 		<center><h1>Mo' Money, Less Problems</h1>
 		<img src="fin_945x493.jpg" alt="FINANCE"></center>
 	</head>
 	<body>
 		<center><p>Finance is really important, use this to calculate your monthly payments</p>
-		<form action="307Ass1.php" method="post">
+		<form action="FinanceCalculations.php" method="post">
 			Amount of Mortgage:	<input type="text" name="loan" value="<?php if (isset($_POST['loan'])) echo $_POST['loan']; ?>"><br/>
 			Interest Rate: <input type="text" name="rate" value="<?php if (isset($_POST['rate'])) echo $_POST['rate']; ?>"><br/>
 			Number of Years: <input type="text" name="paymentsNumber" value="<?php if (isset($_POST['paymentsNumber'])) echo $_POST['paymentsNumber']; ?>"><br/>
