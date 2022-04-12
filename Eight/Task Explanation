@@ -1,7 +1,0 @@
-Using the divide and conquer strategy, accept a number (m) less than or equal to six and create a board of size 2^m x 2^m, also accepts 
-first position square. 
-Then solves the board using a tiles shaped like:
-X
-XX
-
-Completes in black first, and then in random colours
