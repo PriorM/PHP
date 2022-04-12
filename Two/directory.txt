@@ -1,8 +1,0 @@
-name,email,phone,car,price,plate
-Mitchell Prior,priormitch@gmail.com,0415915260,red 100000 kms 4 owners,700,fgy123
-
-
-Mitchell Prior,priormitch@gmail.com,415915260,f,10,f123
-Carlene Prior,forestview@hotmail.com,4127282960,wd,1,eee
-Carlene Prior,priormitch@gmail.com,4127282960,,13,asdg
-

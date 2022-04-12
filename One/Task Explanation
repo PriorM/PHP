@@ -1,1 +1,0 @@
-Calculates monthly payment on a loan using given data from a user form and this formula Monthly Payment= loan * rate / (1-(1/(1+rate)PaymentsNumber))
