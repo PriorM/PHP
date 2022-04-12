@@ -1,0 +1,2 @@
+plate,price,name,phone 
+Mitchell,1982355,eee,4
